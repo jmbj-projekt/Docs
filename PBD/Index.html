@@ -1,1 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Planejamento de Modelagem de Banco de Dados - Q325</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .tabela-container {
+      width: 70%;
+      max-height: 400px;
+      margin: 0 auto;
+      overflow: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 20px;
+      border-bottom: 1px solid #e1e1e1;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2c3e50;
+      color: #fff;
+      position: sticky;
+      top: 0;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .info-box {
+      width: 67%;
+      margin: 30px auto 0;
+      padding: 20px;
+      background-color: #eaf1f8;
+      border-radius: 12px;
+      border-left: 6px solid #fbc02d;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+      font-size: 1em;
+      line-height: 1.6;
+      color: #2c3e50;
+    }
+
+    .info-box p {
+      margin: 10px 0;
+    }
+
+    .grade-table {
+      width: 70%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .grade-table th,
+    .grade-table td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .grade-A {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .grade-B {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .grade-C {
+      background-color: #d1ecf1;
+      color: #0c5460;
+    }
+
+    .grade-D {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .grade-F {
+      background-color: #f5c6cb;
+      color: #721c24;
+      font-weight: bold;
+    }
+
+    .rules-box {
+      width: 67%;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff8e1;
+      border-left: 6px solid #fbc02d;
+      border-radius: 12px;
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: #5d4037;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    .rules-box a {
+      color: #1a237e;
+      text-decoration: none;
+    }
+
+    .rules-box a:hover {
+      text-decoration: underline;
+    }
+
+    .indentada {
+      padding-left: 30px; 
+    }
+
+    @media (max-width: 768px) {
+      .tabela-container,
+      .info-box,
+      .rules-box {
+        width: 90%;
+      }
+    }
+    
+    body {
+ 	 padding: 40px 40px 40px 280px; /* espaço à esquerda para a box fixa */
+    }
+
+    /* Novo estilo para o quadro de atendimento */
+    .atendimento-box {
+      position: fixed;
+      top: 60px;
+      left: 15px;
+      max-width: 280px;
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: .90em;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <!-- Quadro de Atendimento -->
+  <div class="atendimento-box">
+    Prof. João Marelo Borovina Josko <br> 
+    📧 marcelo.josko@ufabc.edu.br <br><br>
+    📅 Atendimento Dúvidas <br> Quarta-feira - 13h30 às 15h30 <br>
+    Sala 517 - Torre 2 - Bloco A
+  </div>
+
+  <h1>Planejamento de Modelagem de BD - Q225</h1>
+  <div class="subtitulo"><h4></h4></div>
+
+  <div class="tabela-container">
+    <table>
+      <thead>
+        <tr>
+          <th>📅 Data</th>
+          <th>📘 Tópico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>17/09</td><td>Apresentação da Disciplina e Contextualização de Dados e SGBDs</td></tr>
+        <tr><td>19/09</td><td>Ciclo de Vida de Dados e Bancos de Dados</td></tr>
+        <tr><td>24/09</td><td>📅 Congresso UFABC</td></tr>
+        <tr><td>26/09</td><td>Eng. Dados - Importância e Projeto Conceitual</td></tr>
+        <tr><td>01/10</td><td>Eng. Dados - Abstração e Projeto Conceitual</td></tr>
+        <tr><td>03/10</td><td>Eng. Dados - Projeto Conceitual</td></tr>      
+        <tr><td>08/10</td><td>Eng. Dados - Avaliação de Projeto Conceitual</td></tr>
+        <tr><td>10/10</td><td>Eng. Dados - Modelagem Semântica de Dados</td></tr>
+        <tr><td>15/10</td><td>Eng. Dados - Modelagem Semântica de Dados e Poliglota de Dados</td></tr>
+        <tr><td>17/10</td><td>Eng. Dados - Projeto Lógico Relacional</td></tr>
+        <tr><td>22/10</td><td>Eng. Dados - Projeto Lógico Relacional</td></tr>
+        <tr><td>24/10</td><td>Eng. Dados - Avaliação de Projeto Lógico Relacional</td></tr>
+        <tr><td>29/10</td><td>Eng. Dados - Avaliação de Projeto Lógico Relacional</td></tr>
+        <tr><td>31/10</td><td>Eng. Dados - Projeto Lógico Documento</td></tr>
+        <tr><td>05/11</td><td>Eng. Dados - Projeto Lógico Documento</td></tr>
+        <tr><td>07/11</td><td>Eng. Dados - Projeto Lógico Grafos</td></tr>
+        <tr><td>12/11</td><td>Eng. Dados - Projeto Lógico Grafos</td></tr>
+        <tr><td>14/11</td><td>Eng. Dados - Projeto Lógico Georeferenciados</td></tr>
+        <tr><td>19/11</td><td>Eng. Dados - Projeto Lógico Georeferenciados</td></tr>
+        <tr><td>21/11</td><td>📅 Feriado</td></tr>
+        <tr><td>26/11</td><td>Eng. Dados - Evolução e Estratégias de Evolução</td></tr>
+        <tr><td>28/11</td><td>Tendências e Desafios</td></tr>
+        <tr><td>03/12</td><td>📌 REC</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <div class="subtitulo"><h2>Avaliações e Cálculos</h></div>
+    <p><strong>📊 Avaliações Regulares</strong></p>
+    <ul class="indentada">
+  	<li>AV1. Modelando Conceitos em Ação (Individual) </li>
+	<li>AV2. Construíndo o Mundo Lógico (Individual)</strong></li>
+	<li>AV3. Modelo em Parceira: IA e Eu (Duplas)</li>
+	<li>AV4. Reflexão do Dia (Duplas)</li>
+    </ul>
+    <ul class="indentada">
+    <p><strong>Cálculo da Nota Final (NF):</strong></p>
+    <ul class="indentada">
+  	<li><strong>NF</strong> = 35% AV1 + 25% AV2 + 30% AV3 + 10% AV4  </li>
+    </ul>
+    </ul>
+    <p><strong>📈 Avaliação de Recuperação (REC)</strong></p>
+    <ul class="indentada">
+    <p><strong>Condições:</strong></p>
+    <ul class="indentada">
+  	<li>Discentes que NÃO REPROVARAM por falta</li>
+	<li>Discentes que obteram Conceito Final <strong>D ou F</strong></li>
+	<li>Cobre todo o conteúdo do curso</li>
+    </ul>
+    </ul>
+    <ul class="indentada">
+    <p><strong>Cálculo da Nota Final APÓS REC (NREC):</strong></p>
+    <ul class="indentada">
+  	<li><strong>NREC</strong> = 40% Nota da REC (Individual) + 60% NF 
+  	</li>
+    </ul>
+    </ul>
+    <p><strong>📈 Critério de Conversão para Conceito Final:</strong></p>
+    <table class="grade-table">
+      <thead>
+        <tr>
+          <th>Conceito</th>
+          <th>Intervalo da NF e NREC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="grade-A"><td><strong>A</strong></td><td>≥ 9</td></tr>
+        <tr class="grade-B"><td><strong>B</strong></td><td>≥ 7,5 e &lt; 9</td></tr>
+        <tr class="grade-C"><td><strong>C</strong></td><td>≥ 6 e &lt; 7,5</td></tr>
+        <tr class="grade-D"><td><strong>D</strong></td><td>≥ 5 e &lt; 6</td></tr>
+        <tr class="grade-F"><td><strong>F</strong></td><td>&lt; 5</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+  <div class="rules-box">
+    <div class="subtitulo"><h2>⚠️ Informações Importantes</h></div>
+    <p>● <strong>Atividades fora do prazo ou não entregues pelo Moodle NÃO SERÃO ACEITAS</strong>, exceto nos casos contemplados pela 
+    <a href="https://www.ufabc.edu.br/images/consepe/resolucoes/resolucao_227_-_regulamenta_a_aplicacao_de_mecanismos_de_avaliacao_substitutivos_nos_cursos_de_graduacao_da_ufabc_revoga_e_substitui_a_resolucao_consepe_n_181.pdf" target="_blank">
+      Resolução CONSEPE nº 227
+    </a>. Nessa hipótese, o discente deverá entregar uma justificativa válida e que cubra todo o período da atividade perdida.</p>
+    <p>● <strong>Ausências NÃO serão abonadas.</strong> Caso reprove por falta no decorrer do curso, suas avaliações NÃO serão mais corrigidas.
+    </p>
+    <p>● <strong>IA é para ajudar com insights e não substituir o pensar e analisar criticamente.</strong> 
+    </p>
+  </div>
+</body>
+</html>
 
